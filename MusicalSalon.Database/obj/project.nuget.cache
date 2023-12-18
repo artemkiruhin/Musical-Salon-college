@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3Yr62aih2IJf5AG0zr20RSGMKjy/Bmh+tegt61FV55XRIXsl7nvj3Erzf8C+vOFG0u0WrBf8SLCbULZh6fMblQ==",
+  "dgSpecHash": "NHF60GDkzobwsayy+wk3dCK7M8VHYHuW0wblPAAAytqKwkzzFNfNI7icZIwkvuR2JXHacf/M+WhVNqtMte4NcA==",
   "success": true,
   "projectFilePath": "D:\\Visual Studio projects\\MDK_Lessons\\ADO\\MusicalSalone\\MusicalSalon.Database\\MusicalSalon.Database.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\artem\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\artem\\.nuget\\packages\\mysqlconnector\\2.3.1\\mysqlconnector.2.3.1.nupkg.sha512"
+  ],
   "logs": []
 }
