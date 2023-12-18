@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace MusicalSalon.Database.DbWorkers.Base {
+    public interface IDbWorker<T> {
 
-namespace MusicalSalon.Database.DbWorkers.Base {
-    internal interface IDbWorker {
+        List<T> GetAll();
+        void Edit(T updatedEntity);
+        void Delete(int id);
+        void Add (T entity);
+
     }
 }
