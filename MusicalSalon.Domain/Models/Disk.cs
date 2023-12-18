@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MusicalSalon.Domain.Models {
-    internal class Disks {
+﻿namespace MusicalSalon.Domain.Models {
+    public class Disk {
+        public int Id { get; set; }
+        public int SongId { get; set; }
+        public decimal Price { get; set; }
     }
 }
