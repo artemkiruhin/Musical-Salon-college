@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "MusicalSalon.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/MusicalSalon.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MusicalSalon.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MusicalSalon.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MusicalSalon.Domain/MusicalSalon.Domain.csproj",
+      "msbuildProject": "../MusicalSalon.Domain/MusicalSalon.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "MusicalSalon.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\artem\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Visual Studio projects\\MDK_Lessons\\ADO\\MusicalSalone\\MusicalSalon.Domain\\MusicalSalon.Domain.csproj": {
+              "projectPath": "D:\\Visual Studio projects\\MDK_Lessons\\ADO\\MusicalSalone\\MusicalSalon.Domain\\MusicalSalon.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
