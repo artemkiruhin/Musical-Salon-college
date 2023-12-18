@@ -1,0 +1,15 @@
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\bin\Debug\net7.0\MusicalSalon.Database.deps.json
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\bin\Debug\net7.0\MusicalSalon.Database.dll
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\bin\Debug\net7.0\MusicalSalon.Database.pdb
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\bin\Debug\net7.0\MusicalSalon.Domain.dll
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\bin\Debug\net7.0\MusicalSalon.Domain.pdb
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\MusicalSalon.Database.csproj.AssemblyReference.cache
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\MusicalSalon.Database.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\MusicalSalon.Database.AssemblyInfoInputs.cache
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\MusicalSalon.Database.AssemblyInfo.cs
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\MusicalSalon.Database.csproj.CoreCompileInputs.cache
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\MusicalSalon.Database.csproj.CopyComplete
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\MusicalSalon.Database.dll
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\refint\MusicalSalon.Database.dll
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\MusicalSalon.Database.pdb
+D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Database\obj\Debug\net7.0\ref\MusicalSalon.Database.dll

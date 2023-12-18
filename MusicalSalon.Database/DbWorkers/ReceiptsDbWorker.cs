@@ -73,5 +73,7 @@ namespace MusicalSalon.Database.DbWorkers {
 
             return receipts;
         }
+
+        public Receipt GetById(int id) => GetAll().FirstOrDefault(x => x.Id == id);
     }
 }

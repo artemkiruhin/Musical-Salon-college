@@ -59,7 +59,7 @@ namespace MusicalSalon.Database.DbWorkers
             var connection = new MySqlConnection(_connectionString);
             connection.Open();
 
-            var query = "SELECT * FROM Disks";
+            var query = "SELECT * FROM Sales";
 
             var cmd = new MySqlCommand(query, connection);
             var reader = cmd.ExecuteReader();
@@ -77,5 +77,7 @@ namespace MusicalSalon.Database.DbWorkers
 
             return sales;
         }
+
+        public Sale GetById(int id) => GetAll().FirstOrDefault(x => x.Id == id);
     }
 }

@@ -65,5 +65,7 @@ namespace MusicalSalon.Database.DbWorkers {
 
             return disks;
         }
+
+        public Disk GetById(int id) => GetAll().FirstOrDefault(x => x.Id == id);
     }
 }

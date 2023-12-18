@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MusicalSalon.Database\MusicalSalon.Database.csproj" />
+    <ProjectReference Include="..\MusicalSalon.Domain\MusicalSalon.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

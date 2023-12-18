@@ -71,5 +71,7 @@ namespace MusicalSalon.Database.DbWorkers {
 
             return songs;
         }
+
+        public Song GetById(int id) => GetAll().FirstOrDefault(x => x.Id == id);
     }
 }

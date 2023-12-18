@@ -62,5 +62,7 @@ namespace MusicalSalon.Database.DbWorkers {
 
             return providers;
         }
+
+        public Provider GetById(int id) => GetAll().FirstOrDefault(x => x.Id == id);
     }
 }

@@ -4,8 +4,7 @@ using MySqlConnector;
 
 namespace MusicalSalon.Database.DbWorkers
 {
-    public class GenresDbWorker : DbWorkerBase, IDbWorker<Genre>
-    {
+    public class GenresDbWorker : DbWorkerBase, IDbWorker<Genre> {
         public void Add(Genre entity)
         {
             var connection = new MySqlConnection(_connectionString);
@@ -68,5 +67,7 @@ namespace MusicalSalon.Database.DbWorkers
 
             return genres;
         }
+
+        public Genre GetById(int id) => GetAll().FirstOrDefault(x => x.Id == id);
     }
 }

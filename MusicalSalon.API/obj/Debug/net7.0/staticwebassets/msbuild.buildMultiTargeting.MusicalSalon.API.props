@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MusicalSalon.API.props" />
+</Project>

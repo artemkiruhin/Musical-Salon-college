@@ -5,6 +5,7 @@
         void Edit(T updatedEntity);
         void Delete(int id);
         void Add (T entity);
+        T GetById (int id);
 
     }
 }
