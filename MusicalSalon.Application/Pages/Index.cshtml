@@ -1,10 +1,72 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+@model MusicalSalon.Application.Pages.IndexModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>Welcome to Musical Salon</h1>
+
+<p>
+    Explore the different sections of our application:
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Songs</h5>
+                <p class="card-text">Browse and manage songs in our collection.</p>
+                <a href="/Songs" class="btn btn-primary">Go to Songs</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Sales</h5>
+                <p class="card-text">View and manage sales records.</p>
+                <a href="/Sales" class="btn btn-primary">Go to Sales</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Receipts</h5>
+                <p class="card-text">Explore and manage receipts from providers.</p>
+                <a href="/Receipts" class="btn btn-primary">Go to Receipts</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Providers</h5>
+                <p class="card-text">Manage information about music providers.</p>
+                <a href="/Providers" class="btn btn-primary">Go to Providers</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Musicians</h5>
+                <p class="card-text">Discover and manage musician profiles.</p>
+                <a href="/Musicians" class="btn btn-primary">Go to Musicians</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Genres</h5>
+                <p class="card-text">Explore different music genres in our collection.</p>
+                <a href="/Genres" class="btn btn-primary">Go to Genres</a>
+            </div>
+        </div>
+    </div>
 </div>

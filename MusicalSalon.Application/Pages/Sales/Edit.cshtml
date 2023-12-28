@@ -1,0 +1,34 @@
+﻿@page
+@model MusicalSalon.Application.Pages.Sales.EditModel
+
+<h2>Edit Sale</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Sale.Id" />
+
+    <div class="form-group">
+        <label asp-for="Sale.Diskid"></label>
+        <input asp-for="Sale.Diskid" class="form-control" />
+        <span asp-validation-for="Sale.Diskid" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Sale.SaleDate"></label>
+        <input asp-for="Sale.SaleDate" type="date" class="form-control" />
+        <span asp-validation-for="Sale.SaleDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Sale.Quantity"></label>
+        <input asp-for="Sale.Quantity" class="form-control" />
+        <span asp-validation-for="Sale.Quantity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Sale.FullPrice"></label>
+        <input asp-for="Sale.FullPrice" class="form-control" />
+        <span asp-validation-for="Sale.FullPrice" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

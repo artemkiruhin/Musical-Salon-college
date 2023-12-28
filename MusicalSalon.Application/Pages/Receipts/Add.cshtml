@@ -1,0 +1,38 @@
+﻿@page
+@model MusicalSalon.Application.Pages.Receipts.AddModel
+
+<h2>Create Receipt</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Receipt.Number"></label>
+        <input asp-for="Receipt.Number" class="form-control" />
+        <span asp-validation-for="Receipt.Number" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Receipt.RecieveDate"></label>
+        <input asp-for="Receipt.RecieveDate" type="date" class="form-control" />
+        <span asp-validation-for="Receipt.RecieveDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Receipt.ProviderId"></label>
+        <input asp-for="Receipt.ProviderId" class="form-control" />
+        <span asp-validation-for="Receipt.ProviderId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Receipt.Quantity"></label>
+        <input asp-for="Receipt.Quantity" class="form-control" />
+        <span asp-validation-for="Receipt.Quantity" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Receipt.FullPrice"></label>
+        <input asp-for="Receipt.FullPrice" class="form-control" />
+        <span asp-validation-for="Receipt.FullPrice" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

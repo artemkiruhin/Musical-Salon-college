@@ -1,0 +1,22 @@
+﻿@page
+@model MusicalSalon.Application.Pages.Disks.EditModel
+
+<h2>Edit Disk</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Disk.Id" />
+
+    <div class="form-group">
+        <label asp-for="Disk.SongId"></label>
+        <input asp-for="Disk.SongId" class="form-control" />
+        <span asp-validation-for="Disk.SongId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Disk.Price"></label>
+        <input asp-for="Disk.Price" class="form-control" />
+        <span asp-validation-for="Disk.Price" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

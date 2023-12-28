@@ -1,0 +1,37 @@
+﻿@page
+@model MusicalSalon.Application.Pages.Providers.IndexModel
+
+<h2>Providers</h2>
+
+<p>
+    <a asp-page="Add">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="Index" asp-route-sortOrder="id">@Html.DisplayNameFor(model => model.Providers.First().Id)</a>
+            </th>
+            <th>
+                <a asp-page="Index" asp-route-sortOrder="name">@Html.DisplayNameFor(model => model.Providers.First().Name)</a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var provider in Model.Providers)
+        {
+            <tr>
+                <td>@provider.Id</td>
+                <td>@provider.Name</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@provider.Id">Edit</a> |
+                    <form method="post" asp-route-id="@provider.Id" asp-page-handler="Delete">
+                        <button type="submit" class="text-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

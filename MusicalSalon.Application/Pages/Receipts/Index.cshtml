@@ -1,0 +1,53 @@
+﻿@page
+@model MusicalSalon.Application.Pages.Receipts.IndexModel
+
+<h2>Receipts</h2>
+
+<p>
+    <a asp-page="Add">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="Index" asp-route-sortOrder="id">@Html.DisplayNameFor(model => model.Receipts.First().Id)</a>
+            </th>
+            <th>
+                <a asp-page="Index" asp-route-sortOrder="number">@Html.DisplayNameFor(model => model.Receipts.First().Number)</a>
+            </th>
+            <th>
+                <a asp-page="Index" asp-route-sortOrder="recieveDate">@Html.DisplayNameFor(model => model.Receipts.First().RecieveDate)</a>
+            </th>
+            <th>
+                <a asp-page="Index" asp-route-sortOrder="providerId">@Html.DisplayNameFor(model => model.Receipts.First().ProviderId)</a>
+            </th>
+            <th>
+                <a asp-page="Index" asp-route-sortOrder="quantity">@Html.DisplayNameFor(model => model.Receipts.First().Quantity)</a>
+            </th>
+            <th>
+                <a asp-page="Index" asp-route-sortOrder="fullPrice">@Html.DisplayNameFor(model => model.Receipts.First().FullPrice)</a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var receipt in Model.Receipts)
+        {
+            <tr>
+                <td>@receipt.Id</td>
+                <td>@receipt.Number</td>
+                <td>@receipt.RecieveDate</td>
+                <td>@receipt.ProviderId</td>
+                <td>@receipt.Quantity</td>
+                <td>@receipt.FullPrice</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@receipt.Id">Edit</a> |
+                    <form method="post" asp-route-id="@receipt.Id" asp-page-handler="Delete">
+                        <button type="submit" class="text-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+    </table>

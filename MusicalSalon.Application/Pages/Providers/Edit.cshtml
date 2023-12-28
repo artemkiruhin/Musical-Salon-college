@@ -1,0 +1,16 @@
+﻿@page
+@model MusicalSalon.Application.Pages.Providers.EditModel
+
+<h2>Edit Provider</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="provider.Id" />
+
+    <div class="form-group">
+        <label asp-for="provider.Name"></label>
+        <input asp-for="provider.Name" class="form-control" />
+        <span asp-validation-for="provider.Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

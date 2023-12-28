@@ -1,0 +1,34 @@
+﻿@page
+@model MusicalSalon.Application.Pages.Songs.EditModel
+
+<h2>Edit Song</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Song.Id" />
+
+    <div class="form-group">
+        <label asp-for="Song.Title"></label>
+        <input asp-for="Song.Title" class="form-control" />
+        <span asp-validation-for="Song.Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Song.MusicianId"></label>
+        <input asp-for="Song.MusicianId" class="form-control" />
+        <span asp-validation-for="Song.MusicianId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Song.GenreId"></label>
+        <input asp-for="Song.GenreId" class="form-control" />
+        <span asp-validation-for="Song.GenreId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Song.ReleaseYear"></label>
+        <input asp-for="Song.ReleaseYear" class="form-control" />
+        <span asp-validation-for="Song.ReleaseYear" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

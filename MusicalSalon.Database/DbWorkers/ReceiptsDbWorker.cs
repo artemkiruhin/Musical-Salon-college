@@ -13,7 +13,7 @@ namespace MusicalSalon.Database.DbWorkers {
             var cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@n", entity.Number);
             cmd.Parameters.AddWithValue("@r", entity.RecieveDate);
-            cmd.Parameters.AddWithValue("@p", entity.FullPrice);
+            cmd.Parameters.AddWithValue("@p", entity.ProviderId);
             cmd.Parameters.AddWithValue("@q", entity.Quantity);
             cmd.Parameters.AddWithValue("@f", entity.FullPrice);
             cmd.ExecuteNonQuery();
@@ -41,7 +41,7 @@ namespace MusicalSalon.Database.DbWorkers {
 
             cmd.Parameters.AddWithValue("@n", updatedEntity.Number);
             cmd.Parameters.AddWithValue("@r", updatedEntity.RecieveDate);
-            cmd.Parameters.AddWithValue("@p", updatedEntity.FullPrice);
+            cmd.Parameters.AddWithValue("@p", updatedEntity.ProviderId);
             cmd.Parameters.AddWithValue("@q", updatedEntity.Quantity);
             cmd.Parameters.AddWithValue("@f", updatedEntity.FullPrice);
             cmd.Parameters.AddWithValue("@rId", updatedEntity.Id);
@@ -54,7 +54,7 @@ namespace MusicalSalon.Database.DbWorkers {
             var connection = new MySqlConnection(_connectionString);
             connection.Open();
 
-            var query = "SELECT * FROM Disks";
+            var query = "SELECT * FROM Receipts";
 
             var cmd = new MySqlCommand(query, connection);
             var reader = cmd.ExecuteReader();

@@ -16,20 +16,104 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Visual Studio projects\MDK_Lessons\ADO\MusicalSalone\MusicalSalon.Application
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Disks/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlza3NcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Disks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlza3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Disks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlza3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Genres/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmVzXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Genres/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Genres/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Musicians/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVzaWNpYW5zXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Musicians/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVzaWNpYW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Musicians/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVzaWNpYW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Providers/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmlkZXJzXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Providers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmlkZXJzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Providers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvdmlkZXJzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Receipts/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZWlwdHNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Receipts/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZWlwdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Receipts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZWlwdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Sales/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZXNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Sales/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Sales/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Songs/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29uZ3NcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Songs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29uZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/Songs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29uZ3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio projects/MDK_Lessons/ADO/MusicalSalone/MusicalSalon.Application/Pages/_ViewImports.cshtml]

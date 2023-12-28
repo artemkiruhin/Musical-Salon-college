@@ -53,7 +53,7 @@ namespace MusicalSalon.Database.DbWorkers {
             var connection = new MySqlConnection(_connectionString);
             connection.Open();
 
-            var query = "SELECT * FROM Disks";
+            var query = "SELECT * FROM Songs";
 
             var cmd = new MySqlCommand(query, connection);
             var reader = cmd.ExecuteReader();

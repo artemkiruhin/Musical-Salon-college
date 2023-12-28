@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MusicalSalon.API\MusicalSalon.API.csproj" />
+    <ProjectReference Include="..\MusicalSalon.Domain\MusicalSalon.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
