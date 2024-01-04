@@ -5,13 +5,22 @@
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="Disk.SongId"></label>
-        <input asp-for="Disk.SongId" class="form-control" />
-        <span asp-validation-for="Disk.SongId" class="text-danger"></span>
+        <label>Song Title</label>
+        <select asp-for="Disk.SongName" name="Disk.SongName" class="form-control">
+            <option value="">Select a song</option>
+            @foreach (var song in Model.Songs)
+            {
+                <option value="@song.Id">@song.Title</option>
+            }
+        </select>
+        <span class="text-danger">
+            
+        </span>
     </div>
 
+
     <div class="form-group">
-        <label asp-for="Disk.Price"></label>
+        <label asp-for="Disk.Price">Price</label>
         <input asp-for="Disk.Price" class="form-control" />
         <span asp-validation-for="Disk.Price" class="text-danger"></span>
     </div>

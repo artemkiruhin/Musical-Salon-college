@@ -1,17 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MusicalSalon.API.Controllers;
+using MusicalSalon.Application.ViewModels;
 using MusicalSalon.Domain.Models;
 
 namespace MusicalSalon.Application.Pages.Disks
 {
     public class IndexModel : PageModel
     {
-        public IEnumerable<Disk> Disks { get; set; }
+        public IEnumerable<DiskViewModel> Disks { get; set; }
         
         public void OnGet(string sortOrder) {
             var api = new DisksController();
-            Disks = api.GetAll();
+            var disks = api.GetAll();
+
+            Disks = disks
+                .Select(d => new DiskViewModel()
+                {
+                    Id = d.Id,
+                    SongName = new SongsController().GetById(d.SongId).Title,
+                    Price = d.Price
+                })
+                .ToList();
+
+
 
             switch (sortOrder)
             {
@@ -19,7 +31,7 @@ namespace MusicalSalon.Application.Pages.Disks
                     Disks = Disks.OrderBy(disk => disk.Id).ToList();
                     break;
                 case "songId":
-                    Disks = Disks.OrderBy(disk => disk.SongId).ToList();
+                    Disks = Disks.OrderBy(disk => disk.SongName).ToList();
                     break;
                 case "price":
                     Disks = Disks.OrderBy(disk => disk.Price).ToList();
