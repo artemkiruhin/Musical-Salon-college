@@ -1,26 +1,37 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MusicalSalon.API.Controllers;
+using MusicalSalon.Application.ViewModels;
 using MusicalSalon.Domain.Models;
 
 namespace MusicalSalon.Application.Pages.Sales
 {
     public class IndexModel : PageModel
     {
-        public IEnumerable<Sale> Sales { get; set; }
+        public IEnumerable<SaleViewModel> Sales { get; set; }
 
         public void OnGet(string sortOrder) {
             
             var api = new SalesController();
-            Sales = api.GetAll();
+            var sales = api.GetAll();
+            Sales = sales
+                .Select(s => new SaleViewModel()
+                {
+                    Id = s.Id,
+                    FullPrice = s.FullPrice,
+                    SaleDate = s.SaleDate,
+                    Quantity = s.Quantity,
+                    DiskName = new DisksController().GetById(s.Diskid).Title
+                })
+                .ToList();
 
             switch (sortOrder)
             {
                 case "id":
                     Sales = Sales.OrderBy(sale => sale.Id).ToList();
                     break;
-                case "diskid":
-                    Sales = Sales.OrderBy(sale => sale.Diskid).ToList();
+                case "diskName":
+                    Sales = Sales.OrderBy(sale => sale.DiskName).ToList();
                     break;
                 case "saleDate":
                     Sales = Sales.OrderBy(sale => sale.SaleDate).ToList();
