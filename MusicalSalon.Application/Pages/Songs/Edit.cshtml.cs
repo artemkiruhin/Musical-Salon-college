@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MusicalSalon.API.Controllers;
+using MusicalSalon.Application.ViewModels;
 using MusicalSalon.Domain.Models;
 
 namespace MusicalSalon.Application.Pages.Songs
@@ -8,11 +9,19 @@ namespace MusicalSalon.Application.Pages.Songs
     public class EditModel : PageModel
     {
         [BindProperty]
-        public Song Song { get; set; }
+        public SongViewModel Song { get; set; }
 
         public IActionResult OnGet(int id) {
             var api = new SongsController();
-            Song = api.GetById(id);
+            var song = api.GetById(id);
+            Song = new SongViewModel()
+            {
+                Id = song.Id,
+                Title = song.Title,
+                ReleaseYear = song.ReleaseYear,
+                GenreName = new GenresController().GetById(song.GenreId).Name,
+                MusicianName = new MusiciansController().GetById(song.MusicianId).Name
+            };
 
             if (Song == null)
             {
@@ -28,7 +37,15 @@ namespace MusicalSalon.Application.Pages.Songs
                 return Page();
             }
             var api = new SongsController();
-            api.Edit(Song);
+            var songToEdit = new Song()
+            {
+                Id = Song.Id,
+                Title = Song.Title,
+                ReleaseYear = Song.ReleaseYear,
+                GenreId = new GenresController().GetAll().FirstOrDefault(g => g.Id == int.Parse(Song.GenreName)).Id,
+                MusicianId = new MusiciansController().GetAll().FirstOrDefault(m => m.Id == int.Parse(Song.MusicianName)).Id
+            };
+            api.Edit(songToEdit);
 
             return RedirectToPage("Index");
         }

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MusicalSalon.API.Controllers;
+using MusicalSalon.Application.ViewModels;
 using MusicalSalon.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -8,12 +9,22 @@ using System.Linq;
 
 namespace MusicalSalon.Application.Pages.Songs {
     public class IndexModel : PageModel {
-        public IEnumerable<Song> Songs { get; set; }
+        public IEnumerable<SongViewModel> Songs { get; set; }
         public string CurrentSort { get; set; }
 
         public void OnGet(string sortOrder) {
             var api = new SongsController();
-            Songs = api.GetAll();
+            var songs = api.GetAll();
+            Songs = songs
+                .Select(s => new SongViewModel()
+                {
+                    Id = s.Id,
+                    Title = s.Title,
+                    ReleaseYear = s.ReleaseYear,
+                    GenreName = new GenresController().GetById(s.GenreId).Name,
+                    MusicianName = new MusiciansController().GetById(s.MusicianId).Name
+                })
+                .ToList();
 
             switch (sortOrder)
             {
@@ -23,11 +34,11 @@ namespace MusicalSalon.Application.Pages.Songs {
                 case "title":
                     Songs = Songs.OrderBy(song => song.Title).ToList();
                     break;
-                case "musicianId":
-                    Songs = Songs.OrderBy(song => song.MusicianId).ToList();
+                case "musicianName":
+                    Songs = Songs.OrderBy(song => song.MusicianName).ToList();
                     break;
-                case "genreId":
-                    Songs = Songs.OrderBy(song => song.GenreId).ToList();
+                case "genreName":
+                    Songs = Songs.OrderBy(song => song.GenreName).ToList();
                     break;
                 case "releaseYear":
                     Songs = Songs.OrderBy(song => song.ReleaseYear).ToList();

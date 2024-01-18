@@ -13,10 +13,10 @@
                 <a asp-page="Index" asp-route-sortOrder="title">Title</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="musicianId">Musician ID</a>
+                <a asp-page="Index" asp-route-sortOrder="musicianName">Musician Name</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="genreId">Genre ID</a>
+                <a asp-page="Index" asp-route-sortOrder="genreName">Genre Name</a>
             </th>
             <th>
                 <a asp-page="Index" asp-route-sortOrder="releaseYear">Release Year</a>
@@ -30,8 +30,8 @@
             <tr>
                 <td>@song.Id</td>
                 <td>@song.Title</td>
-                <td>@song.MusicianId</td>
-                <td>@song.GenreId</td>
+                <td>@song.MusicianName</td>
+                <td>@song.GenreName</td>
                 <td>@song.ReleaseYear</td>
                 <td>
                     <a asp-page="Edit" asp-route-id="@song.Id">Edit</a> |
