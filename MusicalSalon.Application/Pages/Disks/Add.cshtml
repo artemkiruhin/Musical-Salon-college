@@ -17,7 +17,11 @@
             
         </span>
     </div>
-
+    <div class="form-group">
+        <label asp-for="Disk.Title">Price</label>
+        <input asp-for="Disk.Title" class="form-control" />
+        <span asp-validation-for="Disk.Title" class="text-danger"></span>
+    </div>
 
     <div class="form-group">
         <label asp-for="Disk.Price">Price</label>

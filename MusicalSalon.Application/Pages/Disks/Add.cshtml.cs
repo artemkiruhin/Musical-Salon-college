@@ -24,11 +24,12 @@ namespace MusicalSalon.Application.Pages.Disks
 
             var diskToDatabase = new Disk()
             {
+                Title = disk.Title,
                 SongId = new SongsController().GetAll().FirstOrDefault(s => s.Id == int.Parse(disk.SongName)).Id,
                 Price = disk.Price
             };
 
-            Console.WriteLine(diskToDatabase.SongId + " " + diskToDatabase.Price);
+            //Console.WriteLine(diskToDatabase.SongId + " " + diskToDatabase.Price);
             
             api.Add(diskToDatabase);
 
