@@ -14,6 +14,9 @@
                 <a asp-page="Index" asp-route-sortOrder="id">@Html.DisplayNameFor(model => model.Disks.First().Id)</a>
             </th>
             <th>
+                <a asp-page="Index" asp-route-sortOrder="title">@Html.DisplayNameFor(model => model.Disks.First().Title)</a>
+            </th>
+            <th>
                 <a asp-page="Index" asp-route-sortOrder="songId">@Html.DisplayNameFor(model => model.Disks.First().SongName)</a>
             </th>
             <th>
@@ -27,6 +30,7 @@
         {
             <tr>
                 <td>@disk.Id</td>
+                <td>@disk.Title</td>
                 <td>@disk.SongName</td>
                 <td>@disk.Price</td>
                 <td>

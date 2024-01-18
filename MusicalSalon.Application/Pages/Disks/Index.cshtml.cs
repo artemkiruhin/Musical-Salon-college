@@ -18,6 +18,7 @@ namespace MusicalSalon.Application.Pages.Disks
                 .Select(d => new DiskViewModel()
                 {
                     Id = d.Id,
+                    Title = d.Title,
                     SongName = new SongsController().GetById(d.SongId).Title,
                     Price = d.Price
                 })
@@ -29,6 +30,9 @@ namespace MusicalSalon.Application.Pages.Disks
             {
                 case "id":
                     Disks = Disks.OrderBy(disk => disk.Id).ToList();
+                    break;
+                case "title":
+                    Disks = Disks.OrderBy(disk => disk.Title).ToList();
                     break;
                 case "songId":
                     Disks = Disks.OrderBy(disk => disk.SongName).ToList();

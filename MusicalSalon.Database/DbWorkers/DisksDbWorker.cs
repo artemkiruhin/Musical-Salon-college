@@ -8,11 +8,12 @@ namespace MusicalSalon.Database.DbWorkers {
             var connection = new MySqlConnection(_connectionString);
             connection.Open();
 
-            var query = "INSERT INTO Disks(song_id, price) VALUES (@songId, @prc)";
+            var query = "INSERT INTO Disks(title, song_id, price) VALUES (@ttl, @songId, @prc)";
 
             var cmd = new MySqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@songId", entity.SongId);
             cmd.Parameters.AddWithValue("@prc", entity.Price);
+            cmd.Parameters.AddWithValue("@ttl", entity.Title);
 
             cmd.ExecuteNonQuery();
         }
@@ -33,13 +34,14 @@ namespace MusicalSalon.Database.DbWorkers {
             var connection = new MySqlConnection(_connectionString);
             connection.Open();
 
-            var query = "UPDATE Disks SET song_id=@sId, price=@prc WHERE id=@dId";
+            var query = "UPDATE Disks SET song_id=@sId, price=@prc, title=@ttl WHERE id=@dId";
 
             var cmd = new MySqlCommand(query, connection);
 
             cmd.Parameters.AddWithValue("@sId", updatedEntity.SongId);
             cmd.Parameters.AddWithValue("@prc", updatedEntity.Price);
             cmd.Parameters.AddWithValue("@dId", updatedEntity.Id);
+            cmd.Parameters.AddWithValue("@ttl", updatedEntity.Title);
 
             cmd.ExecuteNonQuery();
         }
@@ -58,6 +60,7 @@ namespace MusicalSalon.Database.DbWorkers {
                 disks.Add(new Disk()
                 {
                     Id = reader.GetInt32("id"),
+                    Title = reader.GetString("title"),
                     SongId = reader.GetInt32("song_id"),
                     Price = reader.GetDecimal("price")
                 });

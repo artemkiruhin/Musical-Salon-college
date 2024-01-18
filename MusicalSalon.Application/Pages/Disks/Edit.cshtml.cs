@@ -17,6 +17,7 @@ namespace MusicalSalon.Application.Pages.Disks {
             Disk = new DiskViewModel()
             {
                 Id = u.Id,
+                Title = u.Title,
                 SongName = Songs.First(x => x.Id == u.SongId).Title,
                 Price = u.Price
             };
@@ -29,11 +30,12 @@ namespace MusicalSalon.Application.Pages.Disks {
             var diskToDatabase = new Disk()
             {
                 Id = disk.Id,
+                Title = disk.Title,
                 SongId = new SongsController().GetAll().FirstOrDefault(s => s.Id == int.Parse(disk.SongName)).Id,
                 Price = disk.Price
             };
 
-            Console.WriteLine(diskToDatabase.SongId + " " + diskToDatabase.Price);
+            //Console.WriteLine(diskToDatabase.SongId + " " + diskToDatabase.Price);
 
 
             api.Edit(diskToDatabase);
