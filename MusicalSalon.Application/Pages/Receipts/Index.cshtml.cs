@@ -1,17 +1,31 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MusicalSalon.API.Controllers;
+using MusicalSalon.Application.ViewModels;
 using MusicalSalon.Domain.Models;
 
 namespace MusicalSalon.Application.Pages.Receipts
 {
     public class IndexModel : PageModel
     {
-        public IEnumerable<Receipt> Receipts { get; set; }
+        public IEnumerable<ReceiptViewModel> Receipts { get; set; }
 
         public void OnGet(string sortOrder) {
             var api = new ReceiptsController();
-            Receipts = api.GetAll();
+            var receipts = api.GetAll();
+            Receipts = receipts
+                .Select(r => new ReceiptViewModel()
+                {
+                    Id = r.Id,
+                    FullPrice = r.FullPrice,
+                    Number = r.Number,
+                    Quantity = r.Quantity,
+                    RecieveDate = r.RecieveDate,
+                    ProviderName = new ProvidersController().GetById(r.ProviderId).Name.ToString()
+                })
+                .ToList();
+
+
 
             switch (sortOrder)
             {
@@ -24,8 +38,8 @@ namespace MusicalSalon.Application.Pages.Receipts
                 case "recieveDate":
                     Receipts = Receipts.OrderBy(receipt => receipt.RecieveDate).ToList();
                     break;
-                case "providerId":
-                    Receipts = Receipts.OrderBy(receipt => receipt.ProviderId).ToList();
+                case "providerName":
+                    Receipts = Receipts.OrderBy(receipt => receipt.ProviderName).ToList();
                     break;
                 case "quantity":
                     Receipts = Receipts.OrderBy(receipt => receipt.Quantity).ToList();

@@ -20,7 +20,7 @@
                 <a asp-page="Index" asp-route-sortOrder="recieveDate">@Html.DisplayNameFor(model => model.Receipts.First().RecieveDate)</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="providerId">@Html.DisplayNameFor(model => model.Receipts.First().ProviderId)</a>
+                <a asp-page="Index" asp-route-sortOrder="providerName">@Html.DisplayNameFor(model => model.Receipts.First().ProviderName)</a>
             </th>
             <th>
                 <a asp-page="Index" asp-route-sortOrder="quantity">@Html.DisplayNameFor(model => model.Receipts.First().Quantity)</a>
@@ -38,7 +38,7 @@
                 <td>@receipt.Id</td>
                 <td>@receipt.Number</td>
                 <td>@receipt.RecieveDate</td>
-                <td>@receipt.ProviderId</td>
+                <td>@receipt.ProviderName</td>
                 <td>@receipt.Quantity</td>
                 <td>@receipt.FullPrice</td>
                 <td>

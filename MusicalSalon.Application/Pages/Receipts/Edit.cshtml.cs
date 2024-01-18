@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MusicalSalon.API.Controllers;
+using MusicalSalon.Application.ViewModels;
 using MusicalSalon.Domain.Models;
 
 namespace MusicalSalon.Application.Pages.Receipts
@@ -8,11 +9,20 @@ namespace MusicalSalon.Application.Pages.Receipts
     public class EditModel : PageModel
     {
         [BindProperty]
-        public Receipt Receipt { get; set; }
+        public ReceiptViewModel Receipt { get; set; }
 
         public IActionResult OnGet(int id) {
             var api = new ReceiptsController();
-            Receipt = api.GetById(id);
+            var r = api.GetById(id);
+            Receipt = new ReceiptViewModel()
+            {
+                Id = r.Id,
+                FullPrice = r.FullPrice,
+                Number = r.Number,
+                ProviderName = new ProvidersController().GetById(r.ProviderId).Name,
+                Quantity = r.Quantity,
+                RecieveDate = r.RecieveDate
+            };
 
             if (Receipt == null)
             {
@@ -29,7 +39,16 @@ namespace MusicalSalon.Application.Pages.Receipts
             }
 
             var api = new ReceiptsController();
-            api.Edit(Receipt);
+            var receiptToEdit = new Receipt()
+            {
+                Id = Receipt.Id,
+                RecieveDate = Receipt.RecieveDate,
+                FullPrice = Receipt.FullPrice,
+                Number = Receipt.Number,
+                ProviderId = new ProvidersController().GetAll().FirstOrDefault(p => p.Id == int.Parse(Receipt.ProviderName)).Id,
+                Quantity = Receipt.Quantity
+            };
+            api.Edit(receiptToEdit);
 
             return RedirectToPage("Index");
         }
