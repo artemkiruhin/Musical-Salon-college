@@ -1,25 +1,27 @@
 ﻿@page
 @model MusicalSalon.Application.Pages.Songs.IndexModel
 
-<h2>Songs</h2>
-
+<h2>Песни</h2>
+<p>
+    <a asp-page="Add">Добавить</a>
+</p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="id">ID</a>
+                <a asp-page="Index" asp-route-sortOrder="id">Id</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="title">Title</a>
+                <a asp-page="Index" asp-route-sortOrder="title">Название</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="musicianName">Musician Name</a>
+                <a asp-page="Index" asp-route-sortOrder="musicianName">Испонитель</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="genreName">Genre Name</a>
+                <a asp-page="Index" asp-route-sortOrder="genreName">Жанр</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="releaseYear">Release Year</a>
+                <a asp-page="Index" asp-route-sortOrder="releaseYear">Год релиза</a>
             </th>
             <th></th>
         </tr>
@@ -34,9 +36,9 @@
                 <td>@song.GenreName</td>
                 <td>@song.ReleaseYear</td>
                 <td>
-                    <a asp-page="Edit" asp-route-id="@song.Id">Edit</a> |
+                    <a asp-page="Edit" asp-route-id="@song.Id">Изменить</a> |
                     <form method="post" asp-route-id="@song.Id" asp-page-handler="Delete">
-                        <button type="submit" class="text-danger">Delete</button>
+                        <button type="submit" class="text-danger">Удалить</button>
                     </form>
                 </td>
             </tr>

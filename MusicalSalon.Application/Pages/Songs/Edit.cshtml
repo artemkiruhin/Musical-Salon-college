@@ -1,7 +1,7 @@
 ﻿@page
 @model MusicalSalon.Application.Pages.Songs.EditModel
 
-<h2>Edit Song</h2>
+<h2>Изменение песни</h2>
 
 <form method="post">
     <input type="hidden" asp-for="Song.Id" />
@@ -13,15 +13,31 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="Song.MusicianName"></label>
-        <input asp-for="Song.MusicianName" class="form-control" />
-        <span asp-validation-for="Song.MusicianName" class="text-danger"></span>
+        <label>Исполнитель</label>
+        <select asp-for="Song.MusicianName" name="Song.MusicianName" class="form-control">
+            <option value="">Выберите исполнителя</option>
+            @foreach (var musician in Model.Musicians)
+            {
+                <option value="@musician.Id">@musician.Name</option>
+            }
+        </select>
+        <span class="text-danger">
+
+        </span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Song.GenreName"></label>
-        <input asp-for="Song.GenreName" class="form-control" />
-        <span asp-validation-for="Song.GenreName" class="text-danger"></span>
+        <label>Жанр</label>
+        <select asp-for="Song.GenreName" name="Song.GenreName" class="form-control">
+            <option value="">Выберите жанр</option>
+            @foreach (var genre in Model.Genres)
+            {
+                <option value="@genre.Id">@genre.Name</option>
+            }
+        </select>
+        <span class="text-danger">
+
+        </span>
     </div>
 
     <div class="form-group">
@@ -30,5 +46,5 @@
         <span asp-validation-for="Song.ReleaseYear" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <button type="submit" class="btn btn-primary">Изменить</button>
 </form>

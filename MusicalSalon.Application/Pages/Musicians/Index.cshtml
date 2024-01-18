@@ -1,23 +1,23 @@
 ﻿@page
 @model MusicalSalon.Application.Pages.Musicians.IndexModel
 
-<h2>Musicians</h2>
+<h2>Музыканты</h2>
 
 <p>
-    <a asp-page="Add">Create New</a>
+    <a asp-page="Add">Добавить</a>
 </p>
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="id">@Html.DisplayNameFor(model => model.Musicians.First().Id)</a>
+                <a asp-page="Index" asp-route-sortOrder="id">Id</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="name">@Html.DisplayNameFor(model => model.Musicians.First().Name)</a>
+                <a asp-page="Index" asp-route-sortOrder="name">Псевдоним</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="careerYear">@Html.DisplayNameFor(model => model.Musicians.First().CareerYear)</a>
+                <a asp-page="Index" asp-route-sortOrder="careerYear">Год начала карьеры</a>
             </th>
             <th></th>
         </tr>
@@ -30,9 +30,9 @@
                 <td>@musician.Name</td>
                 <td>@musician.CareerYear</td>
                 <td>
-                    <a asp-page="Edit" asp-route-id="@musician.Id">Edit</a> |
+                    <a asp-page="Edit" asp-route-id="@musician.Id">Изменить</a> |
                     <form method="post" asp-route-id="@musician.Id" asp-page-handler="Delete">
-                        <button type="submit" class="text-danger">Delete</button>
+                        <button type="submit" class="text-danger">Удалить</button>
                     </form>
                 </td>
             </tr>

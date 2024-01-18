@@ -3,13 +3,13 @@
 @{
 }
 
-<h2>Create</h2>
+<h2>Добавление поставщика</h2>
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="Provider.Name"></label>
+        <label asp-for="Provider.Name">Название</label>
         <input asp-for="Provider.Name" class="form-control" />
         <span asp-validation-for="Provider.Name" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-primary">Create</button>
+    <button type="submit" class="btn btn-primary">Добавить</button>
 </form>

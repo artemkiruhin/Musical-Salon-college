@@ -1,32 +1,32 @@
 ﻿@page
 @model MusicalSalon.Application.Pages.Receipts.IndexModel
 
-<h2>Receipts</h2>
+<h2>Поставки</h2>
 
 <p>
-    <a asp-page="Add">Create New</a>
+    <a asp-page="Add">Добавить</a>
 </p>
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="id">@Html.DisplayNameFor(model => model.Receipts.First().Id)</a>
+                <a asp-page="Index" asp-route-sortOrder="id">Id</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="number">@Html.DisplayNameFor(model => model.Receipts.First().Number)</a>
+                <a asp-page="Index" asp-route-sortOrder="number">Номер поставки</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="recieveDate">@Html.DisplayNameFor(model => model.Receipts.First().RecieveDate)</a>
+                <a asp-page="Index" asp-route-sortOrder="recieveDate">Дата</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="providerName">@Html.DisplayNameFor(model => model.Receipts.First().ProviderName)</a>
+                <a asp-page="Index" asp-route-sortOrder="providerName">Поставщик</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="quantity">@Html.DisplayNameFor(model => model.Receipts.First().Quantity)</a>
+                <a asp-page="Index" asp-route-sortOrder="quantity">Количество</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="fullPrice">@Html.DisplayNameFor(model => model.Receipts.First().FullPrice)</a>
+                <a asp-page="Index" asp-route-sortOrder="fullPrice">Полная цена</a>
             </th>
             <th></th>
         </tr>
@@ -42,9 +42,9 @@
                 <td>@receipt.Quantity</td>
                 <td>@receipt.FullPrice</td>
                 <td>
-                    <a asp-page="Edit" asp-route-id="@receipt.Id">Edit</a> |
+                    <a asp-page="Edit" asp-route-id="@receipt.Id">Изменить</a> |
                     <form method="post" asp-route-id="@receipt.Id" asp-page-handler="Delete">
-                        <button type="submit" class="text-danger">Delete</button>
+                        <button type="submit" class="text-danger">Удалить</button>
                     </form>
                 </td>
             </tr>

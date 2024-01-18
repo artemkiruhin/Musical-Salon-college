@@ -1,22 +1,22 @@
 ﻿@page
 @model MusicalSalon.Application.Pages.Musicians.EditModel
 
-<h2>Edit Musician</h2>
+<h2>Изменение музыканта</h2>
 
 <form method="post">
     <input type="hidden" asp-for="Musician.Id" />
 
     <div class="form-group">
-        <label asp-for="Musician.Name"></label>
+        <label asp-for="Musician.Name">Псевдоним</label>
         <input asp-for="Musician.Name" class="form-control" />
         <span asp-validation-for="Musician.Name" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Musician.CareerYear"></label>
+        <label asp-for="Musician.CareerYear">Год начала карьеры</label>
         <input asp-for="Musician.CareerYear" class="form-control" />
         <span asp-validation-for="Musician.CareerYear" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <button type="submit" class="btn btn-primary">Изменить</button>
 </form>

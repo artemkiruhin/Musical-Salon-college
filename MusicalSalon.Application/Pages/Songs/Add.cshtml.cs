@@ -10,7 +10,13 @@ namespace MusicalSalon.Application.Pages.Songs
     {
         [BindProperty]
         public SongViewModel Song { get; set; }
-
+        public IEnumerable<Musician> Musicians { get; set; }
+        public IEnumerable<Genre> Genres { get; set; }
+        public IActionResult OnGet() {
+            Musicians = new MusiciansController().GetAll().ToList();
+            Genres = new GenresController().GetAll().ToList();
+            return Page();
+        }
         public IActionResult OnPost() {
             if (ModelState.IsValid)
             {

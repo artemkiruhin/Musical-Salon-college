@@ -10,8 +10,10 @@ namespace MusicalSalon.Application.Pages.Receipts
     {
         [BindProperty]
         public ReceiptViewModel Receipt { get; set; }
+        public IEnumerable<Provider> Providers { get; set; }
 
         public IActionResult OnGet(int id) {
+            Providers = new ProvidersController().GetAll().ToList();
             var api = new ReceiptsController();
             var r = api.GetById(id);
             Receipt = new ReceiptViewModel()

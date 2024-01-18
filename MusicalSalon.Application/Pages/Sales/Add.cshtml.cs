@@ -10,7 +10,13 @@ namespace MusicalSalon.Application.Pages.Sales
     {
         [BindProperty]
         public SaleViewModel Sale { get; set; }
+        public IEnumerable<DiskViewModel> Disks { get; set; }
 
+        public IActionResult OnGet() {
+            Disks = new DisksController().GetAll().Select(d => new DiskViewModel() { Id = d.Id, Title = d.Title }).ToList();
+
+            return Page();
+        }
         public IActionResult OnPost() {
             if (ModelState.IsValid)
             {

@@ -1,29 +1,29 @@
 ﻿@page
 @model MusicalSalon.Application.Pages.Sales.IndexModel
 
-<h2>Sales</h2>
+<h2>Продажи</h2>
 
 <p>
-    <a asp-page="Add">Create New</a>
+    <a asp-page="Add">Добавить</a>
 </p>
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="id">@Html.DisplayNameFor(model => model.Sales.First().Id)</a>
+                <a asp-page="Index" asp-route-sortOrder="id">Id</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="diskName">@Html.DisplayNameFor(model => model.Sales.First().DiskName)</a>
+                <a asp-page="Index" asp-route-sortOrder="diskName">Диск</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="saleDate">@Html.DisplayNameFor(model => model.Sales.First().SaleDate)</a>
+                <a asp-page="Index" asp-route-sortOrder="saleDate">Дата</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="quantity">@Html.DisplayNameFor(model => model.Sales.First().Quantity)</a>
+                <a asp-page="Index" asp-route-sortOrder="quantity">Количество</a>
             </th>
             <th>
-                <a asp-page="Index" asp-route-sortOrder="fullPrice">@Html.DisplayNameFor(model => model.Sales.First().FullPrice)</a>
+                <a asp-page="Index" asp-route-sortOrder="fullPrice">Полная цена</a>
             </th>
             <th></th>
         </tr>
@@ -38,9 +38,9 @@
                 <td>@sale.Quantity</td>
                 <td>@sale.FullPrice</td>
                 <td>
-                    <a asp-page="Edit" asp-route-id="@sale.Id">Edit</a> |
+                    <a asp-page="Edit" asp-route-id="@sale.Id">Изменить</a> |
                     <form method="post" asp-route-id="@sale.Id" asp-page-handler="Delete">
-                        <button type="submit" class="text-danger">Delete</button>
+                        <button type="submit" class="text-danger">Удалить</button>
                     </form>
                 </td>
             </tr>
